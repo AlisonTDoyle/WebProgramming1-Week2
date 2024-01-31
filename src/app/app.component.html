@@ -1,2 +1,28 @@
+<!-- Styling -->
+<style>
+  .oddrow {
+    background-color: green;
+    padding: 1em;
+  }
+
+  .evenrow {
+    background-color: grey;
+    padding: 1em;
+  }
+</style>
+
+<!-- Signature -->
 <h1>Alison Doyle - S00233102</h1>
-<p>Hello World</p>
+
+<h1>{{title}}</h1>
+
+<!-- Testing arrays and *ngFor -->
+<h2>*ngFor</h2>
+<p *ngFor="let item of thingsToDo; let i = index">{{i}} - {{item}}</p>
+
+<h2>*ngFor Features</h2>
+<p *ngFor="let item of thingsToDo; let i = index; let myOdd=odd; let myEven=even;" [ngClass]="{ oddrow:myOdd, evenrow:myEven}">{{i}} - {{item}}</p>
+
+<!-- Testing *ngIf -->
+<h2>*ngIf</h2>
+<p *ngIf="thingsCompleted.length==0">Nothing Completed</p>
